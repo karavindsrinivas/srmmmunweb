@@ -97,7 +97,7 @@ def recd():
             xk[val]=i;
             val+=1;
         ans=json.dumps(xk);
-        return render_template('name.html',name=ans);
+        return ans;
                                
 if __name__=="__main__":
     app.run(debug=True) 
