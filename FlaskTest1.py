@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify,render_template
-from flask_restful import Resource, Api
 import re
 import nltk.corpus
 import pandas as pd;
@@ -17,7 +16,8 @@ app=Flask(__name__)
 
 @app.route('/')
 def form():
-    return render_template('testhtml.html');
+    d = {"1": "hello"}
+    return jsonify(d)
 
 @app.route('/recd',methods=['GET','POST'])
 def recd():
