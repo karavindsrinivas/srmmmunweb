@@ -40,8 +40,9 @@ def recd():
             if(x[i]!=""):
                 c.append(x[i]);
         ct = [t for t in c if (re.match(r'[^\W]*$', t) or ('&' in t)==True)]
-        stopwords = nltk.corpus.stopwords.words('english')
-        stopwords.extend(sw2);
+        pickle_in=open("sws.pickle","rb");
+        stopwords=pickle.load(pickle_in)
+        pickle_in.close();
         c= [t for t in ct if t not in stopwords]
         pickle_in=open("dict.pickle","rb");
         s=pickle.load(pickle_in)
