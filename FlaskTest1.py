@@ -44,7 +44,7 @@ def recd():
         stopwords=pickle.load(pickle_in)
         pickle_in.close();
         c= [t for t in ct if t not in stopwords]
-        pickle_in=open("dict.pickle","rb");
+        pickle_in=open("dict23.pickle","rb");
         s=pickle.load(pickle_in)
         pickle_in.close();
 
