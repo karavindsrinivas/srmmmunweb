@@ -1,7 +1,5 @@
 from flask import Flask, request, jsonify,render_template
-from flask_restful import Resource, Api
 import re
-import nltk.corpus
 import pandas as pd;
 from collections import Counter
 import operator
@@ -48,8 +46,6 @@ def recd():
         s=pickle.load(pickle_in)
         pickle_in.close();
 
-
-
         #GET COMMITTEE NAMES
         ct=[]
         st="";
@@ -75,7 +71,6 @@ def recd():
                             break;
                         else:
                             st=st+" "+str(c[j])
-
         #GETTING 
         ct=Counter(ct);
         sx=sorted(ct.items(),reverse=True,key=operator.itemgetter(1))
