@@ -77,10 +77,17 @@ def recd():
         ct=Counter(ct);
         sx=sorted(ct.items(),reverse=True,key=operator.itemgetter(1))
         v=sum(ct.values())
-        pickle_in=open("pickled2.pickle","rb");
-        x=pickle.load(pickle_in)
+        
+        pickle_in=open("pickle23.pickle","rb");
+        df2=pickle.load(pickle_in)
         pickle_in.close();
-
+        print(df2);
+        x=[]
+        cols=[]
+        for i in sx:
+            cols.append(i[0]);
+            val=df2[i[0]]*i[1]/v;
+            x.append(val);
             
         df3=pd.DataFrame.from_items([(s.name,s) for s in x])
         df3['soln']=0
