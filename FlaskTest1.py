@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify,render_template
+from flask_cors import CORS
 import re
 import pandas as pd;
 from collections import Counter
@@ -12,6 +13,7 @@ sw2=['chair', 'best', 'secretary', 'highcommendation', 'journalist', 'specialmen
 
 
 app=Flask(__name__)
+CORS(app);
 
 @app.route('/')
 def form():
