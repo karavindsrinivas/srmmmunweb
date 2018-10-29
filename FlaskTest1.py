@@ -23,10 +23,10 @@ def form():
 @app.route('/recd',methods=['GET','POST'])
 def recd():
     if request.method=='POST':
-        return(10);
+        return("10");
     if request.method=='GET': 
-        return (10);
         x = request.args.get('name');
+        return(x);
         x=' '.join(x.split());
         x=x.lower();
         x=re.sub('[^A-Za-z0-9]+', ' ', x)
