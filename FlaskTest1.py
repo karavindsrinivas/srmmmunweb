@@ -23,7 +23,7 @@ def form():
 @app.route('/recd',methods=['GET','POST'])
 def recd():
     if request.method=='GET':
-         d = {"1": "hello"}
+        d = {"1": "hello"}
         return jsonify(d);
     if request.method=='POST':
         x=request.form['name']
