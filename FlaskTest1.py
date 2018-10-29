@@ -24,7 +24,6 @@ def form():
 def recd():
     if request.method=='GET': 
         x = request.args.get('name');
-        return('hello');
         x=' '.join(x.split());
         x=x.lower();
         x=re.sub('[^A-Za-z0-9]+', ' ', x)
