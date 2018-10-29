@@ -22,8 +22,6 @@ def form():
 
 @app.route('/recd',methods=['GET','POST'])
 def recd():
-    if request.method=='POST':
-        return("10");
     if request.method=='GET': 
         x = request.args.get('name');
         return('hello');
