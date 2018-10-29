@@ -23,7 +23,7 @@ def form():
 @app.route('/recd',methods=['GET','POST'])
 def recd():
     if request.method=='GET' or requst.method=='POST':
-        data = request.get_data('name');
+        data = request.get_data();
         data = json.loads(data);
         x = data['name'];
         x=' '.join(x.split());
