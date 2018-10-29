@@ -101,11 +101,13 @@ def recd():
         df5=(df4.nlargest(4,'soln')).T
         l=df5.columns.values;
         xk=dict()
+        m=[];
         val=0;
         for i in l:
+            m.append(i);
             xk[val]=i;
             val+=1;
-        ans=json.dumps(xk);
+        ans=json.dumps(m);
         return ans;
                                
 if __name__=="__main__":
