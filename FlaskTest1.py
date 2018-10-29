@@ -22,7 +22,7 @@ def form():
 
 @app.route('/recd',methods=['GET','POST'])
 def recd():
-    if request.method=='GET' or requst.method=='POST':
+    if request.method=='GET' or request.method=='POST':
         x=request.args.get('name');
         x=' '.join(x.split());
         x=x.lower();
@@ -107,7 +107,7 @@ def recd():
             m+=str(i)+" ";
             xk[val]=i;
             val+=1;
-        ans=json.dumps(m);
+        ans=json.dumps({m:1});
         return ans;
                                
 if __name__=="__main__":
